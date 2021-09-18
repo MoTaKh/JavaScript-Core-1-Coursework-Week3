@@ -21,7 +21,27 @@ PreviousPassword = ["fhD8!yrjj", "ttkTu.wer3", "dvyyeyY!5", "qwbfj76%", "tytT372
 Expected Result:
 PasswordValidationResult=  [false, false, false, false, true]
 
+
+
 */
+function validatePasswords(passwords) {
+  // return passwords.map({(x) =>
+  //   containsUppercaseLetter(passwords) &&
+  //   containsLowercaseLetter(passwords) &&
+  //   containsNumber(passwords) &&
+  //   containsSymbol(passwords)
+  return passwords.map(
+    (password, index, arr) =>
+      containsUppercaseLetter(password) &&
+      containsLowercaseLetter(password) &&
+      containsNumber(password) &&
+      containsSymbol(password) &&
+      password.length >= 5 &&
+      passwords.indexOf(password) === index
+  
+  );
+  
+}
 
 function validatePasswords(passwords) {}
 

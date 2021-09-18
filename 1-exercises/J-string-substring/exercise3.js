@@ -7,8 +7,12 @@
 */
 
 let statement = "I do not like programming";
+let statement1 = statement.substring(0, 4);
+let statement2 = statement.substring(8, 26);
 
-let result = "";
+result = statement1 + statement2;
+
+// let result = "";
 
 console.log(result);
 
